@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", function() {
         let htmlContent = '';
 
         rows.forEach(row => {
-            const [presenter, title, linkp, year, source, linkm] = row.split(',');
+            const [presenter, title, linkp, year, source] = row.split(',');
 
             // Ensure that the row has the expected number of columns to avoid errors
-            if ([presenter, title, linkp, year, source, linkm].includes(undefined)) {
+            if ([presenter, title, linkp, year, source].includes(undefined)) {
                 return;
             }
 
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <td><a href="${linkp.trim()}" target="_blank">Link paper</a></td>
                     <td>${year.trim()}</td>
                     <td>${source.trim()}</td>
-                    // <td><a href="${linkm.trim()}" target="_blank">Link meeting</a></td>
+    
                 </tr>
             `;
         });

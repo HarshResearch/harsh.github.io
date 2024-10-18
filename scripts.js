@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <td><a href="${linkp.trim()}" target="_blank">Link paper</a></td>
                     <td>${year.trim()}</td>
                     <td>${source.trim()}</td>
-                    <td><a href="${linkm.trim()}" target="_blank">Link meeting</a></td>
+                    // <td><a href="${linkm.trim()}" target="_blank">Link meeting</a></td>
                 </tr>
             `;
         });

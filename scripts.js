@@ -9,19 +9,19 @@
                 let htmlContent = '';
 
                 rows.forEach(row => {
-                    const [presenter, title, linkp, year, source] = row.split(',');
+                    const [datec, title, linkp, presenter, source] = row.split(',');
 
                     // Ensure that the row has the expected number of columns to avoid errors
-                    if ([presenter, title, linkp, year, source].includes(undefined) || row.trim() === '') {
+                    if ([datec, title, linkp, presenter, source].includes(undefined) || row.trim() === '') {
                         return;
                     }
 
                     htmlContent += `
                         <tr>
-                            <td>${presenter.trim()}</td>
+                            <td>${datec.trim()}</td>
                             <td>${title.trim()}</td>
                             <td><a href="${linkp.trim()}" target="_blank">Link to paper</a></td>
-                            <td>${year.trim()}</td>
+                            <td>${presenter.trim()}</td>
                             <td>${source.trim()}</td>
                         </tr>
                     `;
